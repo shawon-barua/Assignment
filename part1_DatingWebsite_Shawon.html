@@ -3,12 +3,13 @@
   <head>
     <title>  This is part one of assignment </title>
     <meta name="Author" content="Shawon Barua">
+
   </head>
 
   <body>
-    <h1>Please Enter Your Details For Our Dating Website !</h1> <br>
+    <h2>Please Enter Your Details For Our Dating Website !</h2>
 
-    <form>
+    <form action="https://ihome.ust.hk/~rossiter/cgibin/show_everything.php" method="post" enctype="multipart/form-data">
       <fieldset>
 
         <legend>Your Face </legend>
@@ -22,12 +23,12 @@
       <fieldset>
         <legend>Your General Details </legend>
         <label for="name" > Name :</label>
-        <input type="text" placeholder="Your Full Name" required=""><br>
+        <input type="text" name="name" id="name" placeholder="Your Full Name" required><br>
         <label for="gender" > Gender :</label>
-        <input type="radio" id="gender" name="gender" value="Male" required>Male
-        <input type="radio" id="gender" name="gender" value="Female" required>Female<br>
+        <input type="radio" id="M" name="gender" value="Male" required>  <label for="male" class="wauto"> Male :</label>
+        <input type="radio" id="F" name="gender" value="Female" required>  <label for="female" class="wauto"> Female :</label><br>
         <label for="age" > Age :</label>
-        <input type="number" required=""><br>
+        <input type="number" min="1" max="120" step="1" value="26" name="age" id="age" required><br>
         <label for="DOB"> Date Of Birth : </label>
         <input type="date" id="DOB" name="DOB"><br>
         <label for="color"> Color : </label>
@@ -46,26 +47,27 @@
       <fieldset>
         <legend>Your Indicators</legend>
         <label for="height">Height : </label>
-      Short<input type="range" min="0" max="100" id="height" name="height">Tall<br>
+        <span id="lowerRange"> Short </span><input type="range" min="0" max="100" step="5" id="height" name="height"><span id="higherRange"> Tall </span><br>
         <label for="salary">Salary : </label>
-      Poor<input type="range" min="0" max="100" id="height" name="height">Rich<br>
+        <label  id="lowerRange">Poor</label><input type="range" min="0" max="100" step="5" id="salary" name="salary"><label  id="higherRange">Rich</label><br>
     </fieldset> <br>
-      <fieldset>
+    <fieldset>
         <legend>Your Contact Information</legend>
         <label for="email">Email : </label>
-        <input type="email" id="email" name="email" > <br>
+        <input type="email" id="email" name="email" required> <br>
         <label for="mobile">Mobile : </label>
         <input type="tel" id="mobile" name="mobile" ><br>
         <label for="address">Address : </label>
-        <textarea rows="3" cols="50">
+        <textarea rows="3" cols="40" name="address">
 
         </textarea><br>
         <label for="com">Method to Contact You : </label>
-        <input type="checkbox" id="com" name="com" >Email
-        <input type="checkbox" id="com" name="com" >WhatsApp
-        <input type="checkbox" id="com" name="com" >In-app chat
+        <input type="checkbox" id="mail" name="com" value="mail" > <label  for="mail" class="wauto">Email</label>
+        <input type="checkbox" id="whatsapp" name="com" value="whatsapp" > <label  for="whatsapp" class="wauto">Whatsapp</label>
+        <input type="checkbox" id="chat" name="com" value="chat"> <label  for="chat" class="wauto">In-app-chat</label>
 
-      </fieldset>
+    </fieldset>
+
       <input type="submit" value="Submit">
     </form>
 
